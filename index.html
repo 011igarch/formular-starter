@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formular Starter</title>
+</head>
+
+<style>
+
+  label {
+    display: none;
+  }
+
+</style>
+<body>
+
+  <!-- ==========================
+
+    GET METHODE! 
+    Alle Inputfelder sind "required"
+    Email & Passwortfeld haben Pattern
+
+  =========================== -->
+
+  <form action="index.html" method="get">
+
+    <label for="vorname">Vorname</label>
+    <input type="text" name="vorname" id="vorname" placeholder="Dein Vorname" required> <br><br>
+
+    <label for="nachname">Nachname</label>
+    <input type="text" name=nachname" id=nachname" placeholder="Dein Nachname" required> <br><br> 
+    
+    <label for="email">Email</label>
+    <input type="email" name=email" id=email" placeholder="Deine E-mail Adresse" pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\u0022(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\u0022)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])" title="Gib hier deine Email ein." required> <br><br>
+    
+    <label for="password">Passwort</label>
+    <input type="password" name=password" id=password" placeholder="Dein Passwort" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!?-_.:,;+*~#'´`\\={}()\/&%$§"])[A-Za-z0-9!?-_.:,;+*~#'´`\\={}()\/&%$§"]{8,32}$" title="mind. eine Ziffer | mind. ein Kleinbuchstabe | mind. ein Großbuchstabe | mind. ein Sonderzeichen (!?-_.:,;+*~#“'´`\\={}()\/&%$§)| mind. 8 Zeichen | max. 32 Zeichen" required> <br><br>
+
+    <button type="submit">Absenden</button>
+
+    
+  </form>
+  
+</body>
+</html>
